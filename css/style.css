@@ -79,6 +79,7 @@ header.hero-img .fa-chevron-down {
 	font-size: 30px;
 	color: var(--white);
 }
+
 .about-us i {
 	margin-top: 20px;
 	font-size: 26px;
@@ -101,7 +102,7 @@ header.hero-img .fa-chevron-down {
 	flex-wrap: wrap;
 	align-items: center;
 	gap: 30px;
-	margin: 80px 0 50px;
+	margin: 80px 0 80px;
 }
 .about-us .about-us-info {
 	display: flex;
@@ -112,6 +113,7 @@ header.hero-img .fa-chevron-down {
 	width: 40%;
 	min-width: 300px;
 	box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+	border-radius: 10px;
 
 	h3 {
 		text-align: center;
@@ -157,6 +159,10 @@ header.hero-img .fa-chevron-down {
 }
 .journey-schedule {
 	display: flex;
+
+	 div {
+		border-radius: 10px;
+	}
 }
 .contact {
 	position: relative;
