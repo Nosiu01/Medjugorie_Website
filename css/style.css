@@ -10,7 +10,6 @@
 	--light-gray: #ddd;
 }
 html {
-	scroll-padding-top: 74px;
 	overflow-x: hidden;
 }
 body {
@@ -39,7 +38,7 @@ header.hero-img {
 	position: relative;
 	width: 100%;
 	height: 100vh;
-	background-image: url("../img/medjugorie-mass.jfif");
+	background-image: url("../img/medjugorie-mass.webp");
 	background-size: cover;
 	background-position: center;
 	background-attachment: fixed;
@@ -69,7 +68,7 @@ header.hero-img .hero-shadow {
 	width: 100%;
 	height: 100%;
 	z-index: -5;
-	background-color: rgba(0, 0, 0, 0.85);
+	background-color: rgba(0, 0, 0, 0.88);
 }
 header.hero-img .fa-chevron-down {
 	position: absolute;
@@ -102,7 +101,7 @@ header.hero-img .fa-chevron-down {
 	flex-wrap: wrap;
 	align-items: center;
 	gap: 30px;
-	margin: 80px 0 80px;
+	margin: 40px 0 100px;
 }
 .about-us .about-us-info {
 	display: flex;
@@ -166,10 +165,10 @@ header.hero-img .fa-chevron-down {
 }
 .contact {
 	position: relative;
-	background-image: url("../img/medjugorie-mass.jfif");
+	background-image: url("../img/medjugorie-mass.webp");
 	background-position: center;
-	background-attachment: fixed;
 	background-size: cover;
+	background-attachment: fixed;
 	color: var(--light-gray);
 	z-index: 0;
 }
@@ -179,7 +178,7 @@ header.hero-img .fa-chevron-down {
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background-color: rgba(0, 0, 0, 0.8);
+	background-color: rgba(0, 0, 0, 0.88);
 	z-index: -5;
 }
 .contact .underline {
@@ -219,9 +218,6 @@ header.hero-img .fa-chevron-down {
 	html {
 		scroll-padding-top: 72px;
 	}
-	.contact-us .second-section {
-		background-image: url("../img/medjugorie-mount.webp");
-	}
 	.contact-us .social-media {
 		order: 2;
 	}
@@ -230,10 +226,5 @@ header.hero-img .fa-chevron-down {
 	}
 	.contact-us .place-cracow {
 		order: 3;
-	}
-}
-@media (min-width: 1200px) {
-	header.hero-img {
-		background-image: url("../img/medjugorie-mass.jfif");
 	}
 }
