@@ -165,6 +165,7 @@ header.hero-img .fa-chevron-down {
 }
 .contact {
 	position: relative;
+	padding: 30px;
 	background-image: url("../img/medjugorie-mass.webp");
 	background-position: center;
 	background-size: cover;
@@ -212,19 +213,5 @@ header.hero-img .fa-chevron-down {
 	}
 	.hero-text p {
 		font-size: 20px;
-	}
-}
-@media (min-width: 992px) {
-	html {
-		scroll-padding-top: 72px;
-	}
-	.contact-us .social-media {
-		order: 2;
-	}
-	.contact-us .place-main {
-		order: 1;
-	}
-	.contact-us .place-cracow {
-		order: 3;
 	}
 }
