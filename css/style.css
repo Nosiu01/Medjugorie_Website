@@ -135,6 +135,14 @@ header.hero-img .hero-shadow {
 	text-transform: uppercase;
 	text-align: center;
 }
+.about-us h3.date {
+	margin-top: 20px;
+}
+@media screen and (min-width: 767px) {
+	.about-us h3.date {
+		margin-top: 0;
+	}
+}
 .about-us .about-us-cart-text {
 	font-size: 18px;
 	margin-bottom: 20px;
