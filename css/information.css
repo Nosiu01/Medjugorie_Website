@@ -1,0 +1,86 @@
+.about-us .about-us-info {
+	margin: 0 auto;
+	padding: 10px 30px;
+	width: 40%;
+	min-width: 300px;
+	height: 280px;
+	box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+	border-radius: 10px;
+}
+@media screen and (min-width: 1200px) {
+	.about-us .about-us-info {
+		height: 225px;
+	}
+}
+.about-us .price-info-header {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 20px;
+}
+.about-us .price-info-content {
+	position: relative;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+	margin: 20px 0;
+
+	h3 {
+		position: absolute;
+		top: -20px;
+	}
+
+	p {
+		margin-top: 70px;
+	}
+}
+@media screen and (min-width: 992px) {
+	.about-us .price-info-content {
+		p {
+			margin-top: 30px;
+		}
+	}
+}
+.about-us i {
+	font-size: 26px;
+	color: var(--main-color);
+}
+.about-us h3 {
+	font-size: 30px;
+	text-transform: uppercase;
+	text-align: center;
+}
+.about-us h3.date {
+	margin-top: 20px;
+}
+@media screen and (min-width: 767px) {
+	.about-us h3.date {
+		margin-top: 0;
+	}
+}
+.about-us .about-us-cart-text {
+	font-size: 18px;
+	margin-bottom: 20px;
+	margin-top: -16px;
+}
+.about-us .about-us-hover {
+	transition: color 0.2s;
+}
+.about-us .about-us-hover:hover {
+	color: var(--main-color);
+}
+.about-us .price-info {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 30px;
+	margin: 80px 0 80px;
+}
+.about-us ul {
+	list-style-type: none;
+	text-align: center;
+	padding-left: 0;
+	padding: 10px 30px;
+	font-size: 20px;
+}
