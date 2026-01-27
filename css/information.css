@@ -118,3 +118,10 @@
 		align-items: center;
 	}
 }
+
+@media screen and (max-width: 767px) {
+	.information .box {
+		flex-direction: column;
+		align-items: center;
+	}
+}
