@@ -8,6 +8,7 @@
 	--bg-color: #ebecf2;
 	--white: #fff;
 	--light-gray: #ddd;
+	--shadow: #21212310 0px 7px 29px 0px;
 }
 html {
 	overflow-x: hidden;
