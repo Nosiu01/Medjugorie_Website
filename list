@@ -1,0 +1,83 @@
+                <ul>
+                    <li>
+                        <div class="icon"><i class="fa-solid fa-check"></i></div>
+                        <div class="text">
+                            <p>Opieka duszpasterska i opłata tłumacza w Medjugorje</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="icon"><i class="fa-solid fa-check"></i></div>
+                        <div class="text">
+                            <p>Przejazd autokarem klasy LUX (klimatyzacja, wc, video…)</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="icon"><i class="fa-solid fa-check"></i></div>
+                        <div class="text">
+                            <p>Ubezpieczenie KL i NNW i bagaż</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="icon"><i class="fa-solid fa-check"></i></div>
+                        <div class="text">
+                            <p>8 śniadań i 7 obiadokolacji</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="icon"><i class="fa-solid fa-check"></i></div>
+                        <div class="text">
+                            <p>
+                                1 nocleg z 27/28 czerwca w Ludbergu (sanktuarium Krwi Pańskiej – miejsce cudu
+                                eucharystycznego)
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="icon"><i class="fa-solid fa-check"></i></div>
+                        <div class="text">
+                            <p>7 noclegów w Medjugorje: pokoje 2-, 3-, 4-osobowe z łazienkami w pensjonacie***</p>
+                        </div>
+                    </li>
+                </ul>
+
+///////////////////////////////////////////////////
+.about-us ul {
+  list-style-type: none;
+  padding-left: 0;
+  padding: 10px 30px;
+  font-size: 20px;
+  text-align: center;
+}
+
+.about-us li {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--bg-color);
+  padding: 10px;
+  margin: 10px 0;
+
+  i {
+    width: 30px;
+    height: 30px;
+    background-color: var(--main-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: white;
+    font-size: 15px;
+  }
+}
+
+@media screen and (min-width: 767px) {
+  .about-us ul {
+    text-align: left;
+  }
+
+  .about-us li {
+    flex-direction: row;
+    align-items: start;
+  }
+}
