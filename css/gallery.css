@@ -89,14 +89,14 @@
 	background-position: bottom;
 }
 
-.gallery .i,
-.g,
-.f,
-.e {
+/* .gallery .i,
+.gallery .g,
+.gallery .f,
+.gallery .e {
 	&::before {
 		display: none !important;
 	}
-}
+} */
 
 @media screen and (max-width: 768px) {
 	.gallery .g {
@@ -121,7 +121,7 @@
 		opacity: 1;
 	}
 
-	&::after {
+	&::after:not(.e) {
 		content: "";
 		position: absolute;
 		inset: 0;
