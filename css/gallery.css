@@ -134,7 +134,7 @@
 		transition: opacity 0.25s ease;
 	}
 
-	&::before {
+	&::before:not(.e) {
 		content: attr(data-desc);
 		position: absolute;
 		left: 0;
