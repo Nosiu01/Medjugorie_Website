@@ -1,6 +1,8 @@
 .information {
+	position: relative;
 	background-color: var(--color-bg);
 	color: var(--color-font-white);
+	padding-bottom: 0px !important;
 }
 
 .information .boxes {
@@ -40,7 +42,7 @@
 	font-size: 20px;
 	background-color: var(--color-bg);
 	border: var(--border);
-	border-radius: 0 0 16px 16px;
+	border-radius: 4px 4px 16px 16px;
 	transform: translateX(-50%);
 }
 
@@ -121,6 +123,12 @@
 	p {
 		margin-bottom: 0;
 	}
+}
+
+.information .wave {
+	position: absolute;
+	left: 0;
+	bottom: 0px;
 }
 
 @media screen and (min-width: 767px) {
