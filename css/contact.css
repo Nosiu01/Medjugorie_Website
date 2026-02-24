@@ -5,9 +5,10 @@
 	background-position: center;
 	background-size: cover;
 	background-attachment: fixed;
-	color: var(--light-gray);
+	color: var(--color-font-white);
 	z-index: 0;
 }
+
 .contact .contact-shadow {
 	position: absolute;
 	top: 0;
@@ -17,21 +18,27 @@
 	background-color: rgba(0, 0, 0, 0.89);
 	z-index: -5;
 }
-.contact .underline {
-	background-color: var(--light-gray);
-}
+
 .contact h4 {
-	font-size: 28px;
-	color: var(--main-color);
+	font-size: 24px;
+	background: var(--gradient-primary);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	text-transform: uppercase;
+	font-weight: 900;
 }
+
 .contact .contact-us {
 	margin: 30px 0;
 	font-size: 20px;
 }
+
 .contact a {
 	text-decoration: underline;
 	color: inherit;
 }
+
 .contact h6 {
 	font-size: 19px;
 }

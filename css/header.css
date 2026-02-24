@@ -5,6 +5,7 @@ nav {
 header {
 	height: 100vh;
 }
+
 header.hero-img {
 	position: relative;
 	width: 100%;
@@ -15,26 +16,33 @@ header.hero-img {
 	background-attachment: fixed;
 	z-index: 0;
 }
+
 header.hero-img h1 {
 	margin-bottom: 20px;
 	text-transform: uppercase;
-	color: var(--white);
-	letter-spacing: 2px;
 	font-size: 36px;
+	font-weight: 900;
+	letter-spacing: 2px;
+	background: var(--gradient-primary);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 }
+
 header.hero-img p {
-	color: var(--white);
+	color: var(--color-font-white);
 	padding: 20px;
 	font-size: 18px;
 }
+
 header.hero-img .hero-text {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
 	height: 100%;
-	text-shadow: 0 0 20px #000;
 }
+
 header.hero-img .hero-shadow {
 	position: absolute;
 	top: 0;
