@@ -3,52 +3,6 @@
 	color: var(--color-font-white);
 }
 
-.schedule .schedule-container {
-	display: flex;
-
-	div {
-		border-radius: 10px;
-	}
-}
-
-.schedule .schedule-box {
-	margin: 20px 10px;
-	padding: 40px 40px;
-	background: var(--color-bg);
-	transition: scale 0.3s;
-}
-
-.schedule .schedule-box span {
-	font-weight: bold;
-	color: var(--color-font-secondary);
-}
-
-.schedule .schedule-box hr {
-	margin-bottom: 30px;
-}
-
-.schedule .schedule-box:hover {
-	scale: 1.03;
-}
-
-.schedule .schedule-box p {
-	font-size: 20px;
-}
-
-.schedule .schedule-box .schedule-box-title {
-	background: var(--gradient-primary);
-	background-clip: text;
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-	text-transform: uppercase;
-	font-weight: bold;
-	font-size: 24px;
-}
-
-.schedule .schedule-info {
-	margin-top: 30px;
-}
-
 .timeline-container {
 	display: flex;
 	justify-content: center;
@@ -56,55 +10,109 @@
 
 .timeline {
 	position: relative;
+	margin: 80px 0;
+	margin-bottom: 300px;
 	width: 6px;
-	height: 1500px;
+	height: 1300px;
 	background-color: var(--border-color);
-	margin: 30px 0;
 	border-radius: 10px;
 	box-shadow: var(--shadow-primary);
+
+	&::before,
+	&::after {
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		padding: 8px 16px;
+		background-image: var(--gradient-primary);
+		border-radius: 8px;
+		width: 200px;
+		text-align: center;
+		font-weight: 900;
+		font-size: 16px;
+	}
+
+	&::before {
+		content: "27 CZERWIEC 2026";
+		top: -60px;
+	}
+
+	&::after {
+		content: "5 LIPIEC 2026";
+		bottom: -60px;
+	}
 }
+
+/* Implement intersection observer for better workflow */
+/* .timeline::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 50px;
+	background-image: var(--gradient-primary);
+	transition: height 0.2s ease;
+	border-radius: 10px;
+
+} */
 
 .timeline-item {
 	position: absolute;
-	width: 500px;
-	padding: 62px 10px 32px;
-	border: var(--border);
-	box-shadow: var(--shadow-lighter);
-	border-radius: 16px;
-
 	display: flex;
 	align-items: center;
+	padding: 62px 30px 32px;
+	min-width: 600px;
+	background-color: var(--color-bg);
+	border: var(--border);
+	border-radius: 16px;
+	box-shadow: var(--shadow-lighter);
+
+	&:hover::after {
+		box-shadow: var(--shadow-color-bg);
+	}
 }
 
-.timeline-item.item1 {
+.timeline-item.item1,
+.timeline-item.item3 {
 	top: 50px;
 	right: 60px;
 }
 
-.timeline-item.item2 {
+.timeline-item.item2,
+.timeline-item.item4 {
+	top: 300px;
 	left: 60px;
-	top: 200px;
+}
+
+.timeline-item.item3 {
+	top: 550px;
+}
+
+.timeline-item.item4 {
+	top: 850px;
 }
 
 .timeline .arrow {
 	position: absolute;
-	top: 50%;
+	top: 50px;
 	transform: translateY(-50%);
-	background-color: red;
 	width: 30px;
 	height: 30px;
 	rotate: 45deg;
-	background-color: var(--color-bg-lighter);
+	background-color: var(--color-bg);
 	border: var(--border);
 }
 
-.timeline .item1 .arrow {
+.timeline .item1 .arrow,
+.timeline .item3 .arrow {
 	right: -5px;
 	border-left: none;
 	border-bottom: none;
 }
 
-.timeline .item2 .arrow {
+.timeline .item2 .arrow,
+.timeline .item4 .arrow {
 	left: -26px;
 	border-right: none;
 	border-top: none;
@@ -120,11 +128,12 @@
 	width: 60%;
 	height: 40px;
 	font-size: 20px;
-	background-color: var(--color-bg);
+	font-weight: 900;
+	background-color: var(--color-bg-hover);
+	color: var(--color-main-accent);
 	border: var(--border);
 	border-radius: 4px 4px 16px 16px;
 	transform: translateX(-50%);
-	font-weight: 900;
 }
 
 .timeline-item.item1::before {
@@ -135,29 +144,50 @@
 	content: "DZIEŃ 2";
 }
 
+.timeline-item.item3::before {
+	content: "DZIEŃ 3-8";
+}
+
+.timeline-item.item4::before {
+	content: "DZIEŃ 9";
+}
+
 .timeline-item::after {
 	content: "";
 	position: absolute;
-	top: 50%;
+	top: 55px;
 	transform: translateY(-50%);
 	width: 40px;
 	height: 40px;
 	background-image: var(--gradient-primary);
 	border-radius: 50%;
 	border: 8px solid var(--color-bg-lighter);
+	transition: box-shadow 0.2s ease;
+	z-index: 100;
 }
 
-.timeline-item.item1::after {
+.timeline-item.item1::after,
+.timeline-item.item3::after {
 	right: -78px;
 }
 
-.timeline-item.item2::after {
+.timeline-item.item2::after,
+.timeline-item.item4::after {
 	left: -78px;
 }
 
 .timeline-item ul {
-	list-style-type: none;
 	display: flex;
 	flex-direction: column;
-	gap: 8px;
+	gap: 20px;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+.timeline ul li {
+	padding-left: 20px;
+	width: 100%;
+	font-size: 20px;
+	z-index: 10;
 }
