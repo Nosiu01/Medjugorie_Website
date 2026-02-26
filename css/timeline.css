@@ -1,6 +1,7 @@
-.schedule {
+.timeline {
 	background-color: var(--color-bg-lighter);
 	color: var(--color-font-white);
+	padding-bottom: 5rem !important;
 }
 
 .timeline-container {
@@ -8,54 +9,52 @@
 	justify-content: center;
 }
 
-.timeline {
+.timeline-background {
 	position: relative;
 	margin: 80px 0;
-	margin-bottom: 300px;
-	width: 6px;
 	height: 1300px;
-	background-color: var(--border-color);
-	border-radius: 10px;
-	box-shadow: var(--shadow-primary);
-
-	&::before,
-	&::after {
-		position: absolute;
-		left: 50%;
-		transform: translateX(-50%);
-		padding: 8px 16px;
-		background-image: var(--gradient-primary);
-		border-radius: 8px;
-		width: 200px;
-		text-align: center;
-		font-weight: 900;
-		font-size: 16px;
-	}
 
 	&::before {
-		content: "27 CZERWIEC 2026";
-		top: -60px;
-	}
-
-	&::after {
-		content: "5 LIPIEC 2026";
-		bottom: -60px;
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 6px;
+		height: 100%;
+		background-color: var(--border-color);
+		box-shadow: var(--shadow-primary);
+		border-radius: 10px;
 	}
 }
 
-/* Implement intersection observer for better workflow */
-/* .timeline::after {
-	content: "";
+.timeline-background .badge {
 	position: absolute;
-	left: 0;
-	top: 0;
-	width: 100%;
-	height: 50px;
+	left: 50%;
+	transform: translateX(-50%);
+	padding: 8px 16px;
+	width: 200px;
 	background-image: var(--gradient-primary);
-	transition: height 0.2s ease;
-	border-radius: 10px;
+	text-align: center;
+	font-weight: 900;
+	font-size: 16px;
+	text-transform: uppercase;
+	border-radius: 8px;
+	opacity: 0;
+	transition: opacity 0.8s ease 0.2s;
 
-} */
+	&.active {
+		opacity: 1;
+	}
+}
+
+.timeline-background .badge-1 {
+	top: -60px;
+}
+
+.timeline-background .badge-2 {
+	bottom: -60px;
+}
 
 .timeline-item {
 	position: absolute;
@@ -93,29 +92,29 @@
 	top: 850px;
 }
 
-.timeline .arrow {
+.timeline-background .arrow {
 	position: absolute;
 	top: 50px;
 	transform: translateY(-50%);
 	width: 30px;
 	height: 30px;
-	rotate: 45deg;
 	background-color: var(--color-bg);
 	border: var(--border);
+	rotate: 45deg;
 }
 
-.timeline .item1 .arrow,
-.timeline .item3 .arrow {
+.timeline-background .item1 .arrow,
+.timeline-background .item3 .arrow {
 	right: -5px;
-	border-left: none;
 	border-bottom: none;
+	border-left: none;
 }
 
-.timeline .item2 .arrow,
-.timeline .item4 .arrow {
+.timeline-background .item2 .arrow,
+.timeline-background .item4 .arrow {
 	left: -26px;
-	border-right: none;
 	border-top: none;
+	border-right: none;
 }
 
 .timeline-item::before {
@@ -127,10 +126,10 @@
 	align-items: center;
 	width: 60%;
 	height: 40px;
-	font-size: 20px;
-	font-weight: 900;
 	background-color: var(--color-bg-hover);
 	color: var(--color-main-accent);
+	font-size: 20px;
+	font-weight: 900;
 	border: var(--border);
 	border-radius: 4px 4px 16px 16px;
 	transform: translateX(-50%);
@@ -162,8 +161,8 @@
 	background-image: var(--gradient-primary);
 	border-radius: 50%;
 	border: 8px solid var(--color-bg-lighter);
-	transition: box-shadow 0.2s ease;
 	z-index: 100;
+	transition: box-shadow 0.2s ease;
 }
 
 .timeline-item.item1::after,
@@ -180,14 +179,63 @@
 	display: flex;
 	flex-direction: column;
 	gap: 20px;
-	list-style-type: none;
 	margin: 0;
 	padding: 0;
+	list-style-type: none;
 }
 
-.timeline ul li {
+.timeline-background ul li {
 	padding-left: 20px;
 	width: 100%;
 	font-size: 20px;
 	z-index: 10;
+}
+
+@media screen and (max-width: 1350px) {
+	.timeline-background {
+		height: 1380px;
+	}
+
+	.timeline-item {
+		min-width: 500px;
+	}
+}
+
+@media screen and (max-width: 1150px) {
+	.timeline-background {
+		display: flex;
+		align-items: center;
+		justify-content: space-evenly;
+		flex-direction: column;
+		gap: 160px;
+		padding-top: 140px;
+		padding-bottom: 80px;
+		height: auto;
+	}
+
+	.timeline-item {
+		position: relative;
+		left: 0 !important;
+		top: 0 !important;
+		width: clamp(200px, 100%, 500px);
+		min-width: 0;
+	}
+
+	.timeline-item::after {
+		top: -90px !important;
+		left: 50% !important;
+		transform: translateX(-50%);
+	}
+
+	.timeline-item::before {
+		z-index: 10;
+	}
+
+	.timeline-background .timeline-item .arrow {
+		top: -10px;
+		left: 50%;
+		transform: translateX(calc(-50% - 6px));
+		background-color: var(--color-bg-hover);
+		border: var(--border);
+	}
 }

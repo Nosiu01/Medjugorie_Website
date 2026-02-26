@@ -25,7 +25,7 @@
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/information.css">
-    <link rel="stylesheet" href="./css/schedule.css">
+    <link rel="stylesheet" href="./css/timeline.css">
     <link rel="stylesheet" href="./css/contact.css">
     <link rel="stylesheet" href="./css/gallery.css">
     <link rel="icon" href="img/logo.png" type="image/x-icon">
@@ -122,14 +122,15 @@
             <img src="/img/wave.svg" alt="Wave">
         </section>
 
-        <section id="timeline" class="schedule py-5">
+        <section id="timeline" class="timeline py-5">
             <h2 class="section-title">Program Pielgrzymki</h2>
             <div class="underline"></div>
             <div class="container">
 
                 <div class="timeline-container">
-                    <div class="timeline">
-                        <div class="timeline-item item1">
+                    <div class="timeline-background">
+                        <span class="badge badge-1">27 Czerwiec 2026</span>
+                        <div class="timeline-item item1" data-aos="fade-right" data-aos-duration="600">
                             <ul>
                                 <li>Zbiórka o godz. 5.00, a następnie Msza św. – kościół parafialny w Czchowie</li>
                                 <li>Pakowanie do autokaru. Przejazd przez Słowację, Węgry</li>
@@ -137,7 +138,7 @@
                             </ul>
                             <div class="arrow"></div>
                         </div>
-                        <div class="timeline-item item2">
+                        <div class="timeline-item item2" data-aos="fade-left" data-aos-duration="600">
                             <ul>
                                 <li>Śniadanie w hotelu</li>
                                 <li>Przyjazd do Medjugorje w godzinach popołudniowych - zakwaterowanie i odpoczynek</li>
@@ -147,7 +148,7 @@
                             </ul>
                             <div class="arrow"></div>
                         </div>
-                        <div class="timeline-item item3">
+                        <div class="timeline-item item3" data-aos="fade-right" data-aos-duration="600">
                             <ul>
                                 <li>
                                     Codzienne wieczorne nabożeństwo międzynarodowe: Różaniec, Msza święta, modlitwa o
@@ -166,7 +167,7 @@
                             </ul>
                             <div class="arrow"></div>
                         </div>
-                        <div class="timeline-item item4">
+                        <div class="timeline-item item4" data-aos="fade-left" data-aos-duration="600">
                             <ul>
                                 <li>Śniadanie</li>
                                 <li>Pakowanie bagaży - wyjazd z Medjugorje</li>
@@ -174,6 +175,7 @@
                             </ul>
                             <div class="arrow"></div>
                         </div>
+                        <span class="badge badge-2">5 Lipiec 2026</span>
                     </div>
                 </div>
             </div>
@@ -255,6 +257,7 @@
         crossorigin="anonymous"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="./js/aos.js"></script>
+    <script src="./js/timeline.js"></script>
 </body>
 
 </html>
