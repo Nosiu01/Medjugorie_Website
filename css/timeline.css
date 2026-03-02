@@ -167,12 +167,12 @@
 
 .timeline-item.item1::after,
 .timeline-item.item3::after {
-	right: -78px;
+	right: -81px;
 }
 
 .timeline-item.item2::after,
 .timeline-item.item4::after {
-	left: -78px;
+	left: -81px;
 }
 
 .timeline-item ul {

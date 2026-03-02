@@ -6,10 +6,8 @@
 }
 
 .information .boxes {
-	display: flex;
-	flex-wrap: wrap;
-	align-items: center;
-	justify-content: space-between;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 	gap: 30px;
 	margin: 80px 0 80px;
 }
@@ -20,9 +18,7 @@
 	justify-content: center;
 	align-items: center;
 	padding: 10px 30px;
-	width: 40%;
-	min-width: 300px;
-	height: 280px;
+	height: 250px;
 	background-color: var(--color-bg-lighter);
 	border: var(--border);
 	border-radius: 16px;
@@ -49,6 +45,12 @@
 
 .information .information-box:nth-child(2)::before {
 	content: "CENA";
+	background-image: var(--gradient-primary);
+	color: var(--color-bg-lighter);
+}
+
+.information .information-box:nth-child(3)::before {
+	content: "CZAS POBYTU";
 }
 
 @media screen and (min-width: 1200px) {
