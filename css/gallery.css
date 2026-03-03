@@ -1,15 +1,9 @@
 .gallery {
-	background: linear-gradient(
-			180deg,
-			rgba(255, 255, 255, 0.04) 0%,
-			rgba(255, 255, 255, 0) 40%,
-			rgba(0, 0, 0, 0.25) 100%
-		),
-		#15171c;
+	background-color: var(--color-bg);
 }
 
 .gallery h2 {
-	color: var(--white);
+	color: var(--color-font-white);
 }
 
 .gallery .grid {
@@ -89,15 +83,6 @@
 	background-position: bottom;
 }
 
-/* .gallery .i,
-.gallery .g,
-.gallery .f,
-.gallery .e {
-	&::before {
-		display: none !important;
-	}
-} */
-
 @media screen and (max-width: 768px) {
 	.gallery .g {
 		background-position: center;
@@ -106,7 +91,7 @@
 
 .gallery .item {
 	position: relative;
-	border-radius: 10px;
+	border-radius: 6px;
 	background-size: cover;
 	box-shadow: #21212380 0px 7px 29px 0px;
 	transition: scale 0.3s ease, transform 0.3s ease;
