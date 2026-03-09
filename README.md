@@ -1,9 +1,9 @@
-## Pielgrzymka Czchów – strona internetowa
+# Pielgrzymka Czchów – strona internetowa
 
-Projekt strony internetowej poświęconej pielgrzymce do Czchowa. 
+Projekt strony internetowej poświęconej pielgrzymce do Czchowa.
 Serwis pełni funkcję informacyjną i organizacyjną dla uczestników wydarzenia.
 
-### Funkcje strony
+## Funkcje strony
 
 - informacje o pielgrzymce
 - harmonogram wydarzeń
@@ -11,11 +11,11 @@ Serwis pełni funkcję informacyjną i organizacyjną dla uczestników wydarzeni
 - podstawowe informacje logistyczne
 - materiały dla uczestników
 
-### Cel projektu
+## Cel projektu
 
 Celem projektu jest stworzenie przejrzystej i łatwej w obsłudze strony,
 która umożliwia szybkie znalezienie najważniejszych informacji dotyczących pielgrzymki.
 
-### Strona online
+## Strona online
 
-👉 https://www.pielgrzymkaczchow.pl
+👉 [Link do strony internetowej](https://www.pielgrzymkaczchow.pl)
