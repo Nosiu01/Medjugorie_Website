@@ -1,6 +1,6 @@
 # Pielgrzymka Czchów – strona internetowa
 
-Projekt strony internetowej poświęconej pielgrzymce do Czchowa.
+Projekt strony internetowej poświęconej pielgrzymce z Czchowa do Medjugorie.
 Serwis pełni funkcję informacyjną i organizacyjną dla uczestników wydarzenia.
 
 ## Funkcje strony
